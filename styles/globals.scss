@@ -18,3 +18,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.action-btn {
+  @apply text-lg cursor-pointer w-8 h-8 rounded-full flex items-center justify-center transition-all hover:bg-primary/10;
+  &:hover {
+    svg {
+      @apply text-primary;
+    }
+  }
+}
