@@ -1,0 +1,13 @@
+.surah-card {
+  .f-text {
+    @apply transition-all;
+  }
+  &:hover {
+    .serial-num {
+      @apply bg-primary text-white;
+    }
+    .f-text {
+      @apply text-primary;
+    }
+  }
+}

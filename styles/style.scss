@@ -1,0 +1,7 @@
+@import "./globals.scss";
+@import "./font";
+@import "./surah_card";
+
+body {
+  font-family: $arabic, $roboto, sans-serif;
+}
