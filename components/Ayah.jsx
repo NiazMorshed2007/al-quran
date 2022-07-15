@@ -8,10 +8,12 @@ const Ayah = (props) => {
     audio,
     ending_ayah_num,
     starting_ayah_num,
+    translation,
     text,
     activeAyah,
     setActiveAyah,
   } = props;
+  console.log(translation);
   useEffect(() => {
     const a = document.querySelector(`.audio-active`);
     if (number === activeAyah) {
@@ -21,11 +23,11 @@ const Ayah = (props) => {
   return (
     <div
       className={`${
-        activeAyah === number && "bg-gray-50/50"
-      } mb-5 px-3 flex rounded-xl hover:bg-gray-50/50 transition-all items-center justify-between`}
+        activeAyah === number && "bg-white"
+      } mb-5 px-3 py-2 flex md:flex-row flex-col gap-4 rounded-xl hover:bg-white/90 transition-all items-center justify-between`}
       key={number}
     >
-      <div className="text-slate-500 flex flex-col items-center">
+      <div className="text-slate-500 w-1/12 hidden md:flex flex-col items-center">
         <p className="pb-2 text-sm">
           {surah.number}:{number}
         </p>
@@ -44,9 +46,9 @@ const Ayah = (props) => {
           <BsThreeDots />
         </i>
       </div>
-      <div>
+      <div className="md:w-10/12 w-full">
         <audio
-          className={`invisible ${
+          className={`hidden ${
             number === activeAyah ? "audio-active" : "audio-inactive"
           }`}
           onEnded={() => {
@@ -57,9 +59,10 @@ const Ayah = (props) => {
           src={audio}
           controls
         ></audio>
-        <p className="text-right tracking-wide leading-10 text-2xl my-5 pb-5">
+        <p className="text-right tracking-wide leading-10 text-lg md:text-2xl my-5">
           {text}
         </p>
+        <p className="pb-5 md:text-base text-sm">{translation}</p>
       </div>
     </div>
   );

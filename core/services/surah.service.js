@@ -13,3 +13,7 @@ export const getAllSurahs = async () => {
 export const getASurah = async (number, recitor) => {
   return await getOne(urls.getOne, `${number}/ar.${defaultRecitor}`);
 };
+
+export const getEnglishTranslation = async (number, translator) => {
+  return await getOne(urls.getOne, `${number}/en.asad`);
+};
