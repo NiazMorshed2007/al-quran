@@ -1,1 +1,1 @@
-export const defaultRecitor = "hanirifai";
+export const defaultRecitor = "ar.hanirifai";

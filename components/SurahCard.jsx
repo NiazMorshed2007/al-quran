@@ -19,7 +19,7 @@ const SurahCard = (props) => {
       onClick={() => {
         navigateToSurah(number);
       }}
-      className="p-3 w-[32%] surah-card flex items-center justify-between rounded border cursor-pointer transition-all hover:border-primary"
+      className="p-3 w-[350px] md:w-[32%] surah-card flex items-center justify-between rounded border cursor-pointer transition-all hover:border-primary"
     >
       <div className="flex items-center gap-4">
         <div className="h-9 serial-num transition-all flex items-center justify-center w-9 text-gray-500 rounded rotate-45 bg-gray-100">

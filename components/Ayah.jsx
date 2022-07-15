@@ -13,7 +13,6 @@ const Ayah = (props) => {
     activeAyah,
     setActiveAyah,
   } = props;
-  console.log(translation);
   useEffect(() => {
     const a = document.querySelector(`.audio-active`);
     if (number === activeAyah) {

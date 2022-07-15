@@ -6,12 +6,12 @@ const Banner = () => {
   return (
     <div className="relative flex flex-col items-center overflow-hidden justify-center">
       <img
-        className="absolute -z-10 top-0 left-0"
+        className="absolute w-full h-full -z-10 top-0 left-0"
         src="https://quran.com/images/background.jpg"
         alt=""
       />
       <Logo />
-      <div className="search-bar cursor-pointer mb-20 flex items-center justify-between p-5 rounded-3xl w-6/12 bg-white">
+      <div className="search-bar cursor-pointer mb-20 flex items-center justify-between p-5 rounded-3xl w-11/12 md:w-6/12 bg-white">
         <div className="flex items-center gap-4">
           <BsSearch className="text-lg text-primary" />
           <p className="text-slate-500">What do you want to read?</p>
