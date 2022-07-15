@@ -1,8 +1,10 @@
+import axios from "axios";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { BsFillPlayFill } from "react-icons/bs";
 import Ayah from "../../components/Ayah";
 import Bismillah from "../../components/Bismillah";
+import { API_URL } from "../../core/config/environment";
 import { getASurah } from "../../core/services/surah.service";
 import Layout from "../../layout/Layout";
 
@@ -26,6 +28,7 @@ const Surah = () => {
         set_starting_ayah_num(data.ayahs[0].number);
         set_ending_ayah_num(data.ayahs[data.ayahs.length - 1].number);
         setSurah(data);
+        console.log(data);
       })
       .catch((err) => console.log(err));
   }, [id]);

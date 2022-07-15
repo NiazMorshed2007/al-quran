@@ -1,15 +1,11 @@
-import { http_secured, http_unsecured } from "../helpers/http";
+import { http_secured } from "../helpers/http";
 
 export const getAll = (path) => {
   const url = path;
   return http_secured.get(url);
 };
 
-export const getOne_s = (path, id) => {
-  const url = `${path}/${id}}`;
-  return http_secured.get(url);
-};
-export const getOne_un = (path, id) => {
+export const getOne = (path, id) => {
   const url = `${path}/${id}`;
-  return http_unsecured.get(url);
+  return http_secured.get(url);
 };

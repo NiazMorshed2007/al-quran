@@ -1,5 +1,5 @@
 import { defaultRecitor } from "../utils/defaults";
-import { getAll, getOne_un } from "./api";
+import { getAll, getOne } from "./api";
 
 const urls = {
   all_surahs: "surah",
@@ -11,5 +11,5 @@ export const getAllSurahs = async () => {
 };
 
 export const getASurah = async (number, recitor) => {
-  return await getOne_un(urls.getOne, `${number}/ar.${defaultRecitor}`);
+  return await getOne(urls.getOne, `${number}/ar.${defaultRecitor}`);
 };
